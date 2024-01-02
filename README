@@ -1,0 +1,62 @@
+Random Ideas App (Replica Project)
+A 36-hour master course to take you from beginner to advanced JavaScript by Traversy Media, registered on Udemy. I completed the backend part and randomideas project of the course. Here I saw new perspectives and repeated what I learned before. I also saved the tool installation npm settings.
+
+Setup
+1. Initialize npm
+npm init
+Version: idea sharing app
+Description: Idea sharing app
+Entry Point: server.js
+License: MIT
+2. Install Express
+npm i express
+npm i -g npm@9.4.0
+After setting up port listen in server.js, update package.json:
+and I updated;
+"scripts": {
+  "start": "node server.js"
+}
+3. Setup .gitignore
+Open the .gitignore file and write node_modules in it.
+
+4. Install Nodemon
+npm i -D nodemon
+
+I added the following under the "scripts" section in package.json:
+"dev": "nodemon server.js"
+
+5. Database Setup
+npm i dotenv mongoose
+
+6. Create .env file
+Create a .env file in the root directory and add the MongoDB connection string:
+
+7. Details of Seed Initial Ideas
+
+const express = require('express');
+const router = express.Router();
+const Idea = require('../models/Idea');
+
+const ideas = [
+    {
+        id: 1,
+        text: 'AI-Powered Personal Assistant',
+        tag: 'Technology',
+        username: 'elon musk',
+        date: '2023.01.15'
+    },
+    {
+        id: 2,
+        text: 'Green Energy Solutions',
+        tag: 'Environment',
+        username: 'greta thunberg',
+        date: '2023.03.22'
+    },
+    {
+        id: 3,
+        text: 'Mars Colonization Plan',
+        tag: 'Space',
+        username: 'neil armstrong',
+        date: '2023.05.10'
+    },
+];
